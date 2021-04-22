@@ -7,12 +7,9 @@ class BottomNavScreen extends StatefulWidget {
 }
 
 class _BottomNavScreenState extends State<BottomNavScreen> {
-  final List _screens = [
-    // HomeScreen(),
-    // StatsScreen(),
-    Scaffold(),
-    Scaffold(),
-    Scaffold(),
+  final List _screens = [   
+    HomeScreen(),  
+    Scaffold(),  
     Scaffold(),
     Scaffold(),
   ];
@@ -32,7 +29,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
         elevation: 0.0,
-        items: [Icons.home, Icons.dashboard_rounded, Icons.person_outlined, Icons.info]
+        items: [Icons.home, Icons.dashboard_rounded, Icons.person, Icons.info]
             .asMap()
             .map((key, value) => MapEntry(
                   key,
