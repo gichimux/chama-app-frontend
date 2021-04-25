@@ -19,155 +19,39 @@ class _HomeScreenState extends State<HomeScreen> {
       body: CustomScrollView(
         physics: ClampingScrollPhysics(),
         slivers: <Widget>[
-          _buildHeader(screenHeight),
-           SliverPadding(
+          _chamaListHeader(screenHeight),
+          SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             sliver: SliverToBoxAdapter(
-              child: StatsGrid(),
+              child: ChamaListGrid(),
             ),
           ),
-          _repayButton(screenHeight),
         ],
       ),
     );
   }
 
-  SliverToBoxAdapter _buildHeader(double screenHeight) {
+  SliverToBoxAdapter _chamaListHeader(double screenHeight) {
     return SliverToBoxAdapter(
       child: Container(
         padding: const EdgeInsets.all(20.0),
-        decoration: BoxDecoration(
-          color: Palette.primaryColor,
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(25.0),
-            bottomRight: Radius.circular(25.0),
-          ),
-        ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                IconButton(
-                  icon: const Icon(Icons.group_work),
-                  iconSize: 33.0,
-                  color: Colors.white,
-                  onPressed: () {},
-                ),
-              ],
+            
+            Text(
+              
+              'My chamas:',
+              style: const TextStyle(
+                fontSize: 22.0,
+                fontWeight: FontWeight.w600,
+              ),
             ),
-            SizedBox(height: screenHeight * 0.03),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  'Chama x self help group',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 22.0,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                SizedBox(height: screenHeight * 0.01),
-                SizedBox(height: screenHeight * 0.03),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    FlatButton.icon(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 10.0,
-                        horizontal: 20.0,
-                      ),
-                      onPressed: () {},
-                      color: Colors.green,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      icon: const Icon(
-                        Icons.save_alt,
-                        color: Colors.white,
-                      ),
-                      label: Text(
-                        'Add Savings',
-                        style: Styles.buttonTextStyle,
-                      ),
-                      textColor: Colors.white,
-                    ),
-                    FlatButton.icon(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 10.0,
-                        horizontal: 20.0,
-                      ),
-                      onPressed: () {},
-                      color: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      icon: const Icon(
-                        Icons.monetization_on_rounded,
-                        color: Colors.white,
-                      ),
-                      label: Text(
-                        'Borrow Loan',
-                        style: Styles.buttonTextStyle,
-                      ),
-                      textColor: Colors.white,
-                    ),
-                  ],
-                ),
-              ],
-            )
+            const SizedBox(height: 10.0),
+            
           ],
         ),
       ),
     );
   }
 }
-
-SliverToBoxAdapter _repayButton(double screenHeight) {
-  return SliverToBoxAdapter(
-    child: Container(
-      padding: const EdgeInsets.all(20.0),
-      
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          const SizedBox(height: 20.0),
-          
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  
-                      children: <Widget>[
-                        
-                     FlatButton.icon(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 10.0,
-                        horizontal: 20.0,
-                      ),
-                      onPressed: () {},
-                      color: Colors.orange,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      icon: const Icon(
-                        Icons.upload_sharp,
-                        color: Colors.white,
-                      ),
-                      label: Text(
-                        'Repay Loan',
-                        style: Styles.buttonTextStyle,
-                      ),
-                      textColor: Colors.white,
-                    ),
-                      
-                      ],
-                    ),
-                
-        ],
-      ),
-    ),
-  );
-}
-
