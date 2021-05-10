@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            
+            SizedBox(height: screenHeight * 0.03),
             Text(
               
               'My chamas:',

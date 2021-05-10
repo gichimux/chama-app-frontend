@@ -5,11 +5,12 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      centerTitle: true,
       title: Text("M-Chama"),
       backgroundColor: Palette.primaryColor,
       elevation: 0.0,
       leading: IconButton(
-        icon: const Icon(Icons.menu),
+        icon: const Icon(Icons.arrow_back_rounded),
         iconSize: 28.0,
         onPressed: () {},
       ),

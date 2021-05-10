@@ -64,7 +64,7 @@ class ChamaListGrid extends StatelessWidget {
                   chamaname,
                   style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 15.0,
+                  fontSize: 20.0,
                   fontWeight: FontWeight.w600,
               ),
             ),

@@ -35,7 +35,7 @@ class _MamberDashState extends State<MemberDashScreen> {
   SliverToBoxAdapter _buildHeader(double screenHeight) {
     return SliverToBoxAdapter(
       child: Container(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           color: Palette.primaryColor,
           borderRadius: BorderRadius.only(
@@ -46,17 +46,17 @@ class _MamberDashState extends State<MemberDashScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                IconButton(
-                  icon: const Icon(Icons.group_work),
-                  iconSize: 33.0,
-                  color: Colors.white,
-                  onPressed: () {},
-                ),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: <Widget>[
+            //     IconButton(
+            //       icon: const Icon(Icons.group_work),
+            //       iconSize: 33.0,
+            //       color: Colors.white,
+            //       onPressed: () {},
+            //     ),
+            //   ],
+            // ),
             SizedBox(height: screenHeight * 0.03),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,11 +73,11 @@ class _MamberDashState extends State<MemberDashScreen> {
                 SizedBox(height: screenHeight * 0.01),
                 SizedBox(height: screenHeight * 0.03),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     FlatButton.icon(
                       padding: const EdgeInsets.symmetric(
-                        vertical: 10.0,
+                        vertical: 15.0,
                         horizontal: 20.0,
                       ),
                       onPressed: () {},
@@ -97,7 +97,7 @@ class _MamberDashState extends State<MemberDashScreen> {
                     ),
                     FlatButton.icon(
                       padding: const EdgeInsets.symmetric(
-                        vertical: 10.0,
+                        vertical: 15.0,
                         horizontal: 20.0,
                       ),
                       onPressed: () {},
@@ -118,7 +118,7 @@ class _MamberDashState extends State<MemberDashScreen> {
                   ],
                 ),
               ],
-            )
+            ),SizedBox(height: screenHeight * 0.02),
           ],
         ),
       ),
@@ -129,7 +129,7 @@ class _MamberDashState extends State<MemberDashScreen> {
 SliverToBoxAdapter _repayButton(double screenHeight) {
   return SliverToBoxAdapter(
     child: Container(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(8.0),
       
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -143,7 +143,7 @@ SliverToBoxAdapter _repayButton(double screenHeight) {
                         
                      FlatButton.icon(
                       padding: const EdgeInsets.symmetric(
-                        vertical: 10.0,
+                        vertical: 15.0,
                         horizontal: 20.0,
                       ),
                       onPressed: () {},
@@ -164,7 +164,7 @@ SliverToBoxAdapter _repayButton(double screenHeight) {
                       
                       ],
                     ),
-                
+          SizedBox(height: screenHeight * 0.03),
         ],
       ),
     ),

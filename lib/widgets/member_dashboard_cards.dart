@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 
 class StatsGrid extends StatelessWidget {
   @override
+  
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
     return Container(
       height: 400.0,
       child: Column(
         children: <Widget>[
+          SizedBox(height: screenHeight * 0.02),
           Flexible(
             child: Row(
               children: <Widget>[
@@ -19,7 +22,7 @@ class StatsGrid extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 _buildStatCard(Icons.home_repair_service_rounded, 'Borrowed', '30,000', Colors.orange),
-                _buildStatCard(Icons.insert_chart_outlined, 'Analytics', '', Colors.purple),
+                _buildStatCard(Icons.history, 'History', '-', Colors.purple),
               ],
             ),
           ),
@@ -79,7 +82,7 @@ class StatsGrid extends StatelessWidget {
                       label,
                       style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 15.0,
+                      fontSize: 18.0,
                       fontWeight: FontWeight.w600,
               ),
             ),
